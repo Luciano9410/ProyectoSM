@@ -1,0 +1,205 @@
+/* Tipografía y reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+.site-header {
+  background-color: #0066cc;
+  color: white;
+}
+.top-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+}
+.top-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+.top-nav a:hover {
+  text-decoration: underline;
+}
+
+.main-nav {
+  background-color: #004d99;
+}
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem 0;
+}
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+.main-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom, #eaf4ff, #f8f9fa);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #555;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.primary {
+  background-color: #007bff;
+  color: white;
+}
+.primary:hover {
+  background-color: #0056b3;
+}
+.secondary {
+  background-color: #dee2e6;
+  color: #333;
+}
+.secondary:hover {
+  background-color: #ced4da;
+}
+
+/* Sección: Centros */
+.centers {
+  padding: 3rem 2rem;
+  background-color: white;
+  text-align: center;
+}
+.centers h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  width: 250px;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Sección: Historias */
+.stories {
+  padding: 3rem 2rem;
+  background-color: #f1f3f5;
+}
+.stories h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.stories ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.stories li {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.stories a {
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #343a40;
+  color: #ccc;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.footer-section {
+  min-width: 200px;
+}
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.footer-section a {
+  display: block;
+  color: #adb5bd;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
