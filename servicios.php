@@ -13,23 +13,11 @@
         <li class="item"><a href="#">Volver a inicio</a></li>
         <li class="item"><a href="#">Servicios</a></li>
       </ul>
-    </header>
-  
+    </header>  
     <div style="display: flex;">
       <div class="sidebar">
-        <ul>
-          <li class="item2">
-            <form action="" method="post" style="display:inline;">
-              <input type="hidden" name="carpeta" value="kinesiologia">
-              <button type="submit">Kinesiologia</button>
-            </form>
-          </li>
-          <li class="item2">
-            <form action="" method="post" style="display:inline;">
-              <input type="hidden" name="carpeta" value="turnos">
-              <button type="submit">Turnos</button>
-            </form>   
-          </li>
+        <ul id="carpetas-list">
+          <!-- Las carpetas se agregarán aquí con JavaScript -->
         </ul>
       </div>
       <div class="contenido" style="flex:1; padding: 32px;">
@@ -55,6 +43,24 @@
         ?>
       </div>
     </div>
-    
+    <script>
+    // Solicita las carpetas al backend y las agrega a la lista
+    fetch('listar_carpetas.php')
+      .then(response => response.json())
+      .then(data => {
+        const ul = document.getElementById('carpetas-list');
+        data.forEach(nombre => {
+          const li = document.createElement('li');
+          li.className = 'item2';
+          li.innerHTML = `
+            <form action="" method="post" style="display:inline;">
+              <input type="hidden" name="carpeta" value="${nombre}">
+              <button type="submit">${nombre.charAt(0).toUpperCase() + nombre.slice(1)}</button>
+            </form>
+          `;
+          ul.appendChild(li);
+        });
+      });
+    </script>
   </body>
   </html>  
