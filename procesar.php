@@ -2,7 +2,7 @@
 if (isset($_POST['carpeta'])) {
     $carpeta = $_POST['carpeta'];
     // Seguridad: evitar rutas fuera del directorio permitido
-    $baseDir = __DIR__ . '/';
+    $baseDir = __DIR__ . '/Archivos';
     $ruta = realpath($baseDir . $carpeta);
     if ($ruta && strpos($ruta, $baseDir) === 0 && is_dir($ruta)) {
         echo "<h2>Contenido de la carpeta: $carpeta</h2>";

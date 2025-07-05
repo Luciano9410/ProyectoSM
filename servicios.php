@@ -24,15 +24,14 @@
         <?php
         if (isset($_POST['carpeta'])) {
             $carpeta = $_POST['carpeta'];
-            $baseDir = __DIR__ . '/';
+            $baseDir = __DIR__ . '/Archivos'."/"; // Cambia a tu directorio base
             $ruta = realpath($baseDir . $carpeta);
             if ($ruta && strpos($ruta, $baseDir) === 0 && is_dir($ruta)) {
                 echo "<h2>Contenido de la carpeta: $carpeta</h2>";
                 echo "<ul>";
                 foreach (scandir($ruta) as $archivo) {
                     if ($archivo !== '.' && $archivo !== '..') {
-                        $fileUrl = $carpeta . '/' . urlencode($archivo);
-                        echo "<li><a href='$fileUrl' download>$archivo</a></li>";
+                        $fileUrl = "Archivos/" . rawurlencode($carpeta) . "/" . rawurlencode($archivo);  echo "<li><a href='$fileUrl' download>$archivo</a></li>";
                     }
                 }
                 echo "</ul>";
