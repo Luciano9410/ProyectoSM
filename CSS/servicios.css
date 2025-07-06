@@ -1,0 +1,42 @@
+
+body h1{
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.site-header-servicios {
+  background-color: #ffffff;
+  color: white;
+}
+
+
+.left-side{
+
+    height: 100vh;
+    width: 17vw;
+    background-color: #004d99;
+   
+}
+ 
+.left-side>p {margin-left: 5%;}
+
+
+.header-content{
+
+  display: flex;
+  flex-direction: row;
+  
+  gap: 3%;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+.left-side{
+
+    height: 100vh;
+    width: 40vw;
+    background-color: #004d99;
+}
+
+}
+

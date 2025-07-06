@@ -12,10 +12,12 @@
    
     <nav class="main-nav">
       <ul>
-        <li><a href="#">Sanatorio</a></li>
-        <li><a href="#">Pacientes</a></li>
-        <li><a href="#">?</a></li>
-        <li><a href="#">?</a></li>     
+        <li class="inicio" id="link-inicio"><a href="index.html">INICIO</a></li>
+        <li><a href="Servicios.php">SERVICIOS</a></li>
+        <li><a href="#">TURNOS/CONSULTAS</a></li>
+        <li><a href="#">INTERNACION</a></li>    
+        <li><a href="#">CONSULTORIOS</a></li>     
+        
       </ul>
     </nav>
   </header>
@@ -25,7 +27,7 @@
     <p>Somos Sanatorio San Marcos, centro de salud privado y referencia sanvicentina. Hace más de 40 años ...</p>
     <div class="cta-buttons">
       <a href="#" class="btn primary">Quiero sacar un turno</a>
-      <a href="#" class="btn secondary">Servicios que ofrecemos</a>
+      <a href="Servicios.php" class="btn secondary">Servicios que ofrecemos</a>
     </div>
   </section>
 
@@ -67,6 +69,20 @@
       <a href="#">Términos y condiciones</a>
     </div>
   </footer>
+
+
+  
+
+
+  <script>
+  // Detecta si estamos en "servicios.php"
+  const path = window.location.pathname;
+  const nombreArchivo = path.substring(path.lastIndexOf('/') + 1);
+
+  if (nombreArchivo === '' || nombreArchivo === 'index.html') {
+    document.getElementById("link-inicio").style.display = "none";
+  }
+</script>
 
 </body>
 </html>

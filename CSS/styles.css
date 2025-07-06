@@ -180,20 +180,55 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
   .main-nav ul {
+
+    flex-wrap: wrap;
+    display: flex;
+
+    /*
     flex-direction: column;
     align-items: center;
+
+    */
   }
   .cta-buttons {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    /*
     flex-direction: column;
     align-items: center;
   
+
+    */
   }
   .cards {
+
+    flex-wrap: wrap;
+    display: flex;
+
+    /*
     flex-direction: column;
     align-items: center;
+    
+    */
   }
   .site-footer {
+    
+    flex-wrap: wrap;
+    display: flex;
+    /*
     flex-direction: column;
     align-items: center;
+
+    */
   }
+
+.index.html:target{
+  display: none;
+}
+
+
+
+
 }
