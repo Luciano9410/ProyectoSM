@@ -1,4 +1,4 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -20,30 +20,12 @@
           <!-- Las carpetas se agregarán aquí con JavaScript -->
         </ul>
       </div>
-      <div class="contenido" style="flex:1; padding: 32px;">
-        <?php
-        if (isset($_POST['carpeta'])) {
-            $carpeta = $_POST['carpeta'];
-            $baseDir = __DIR__ . '/Archivos'."/"; // Cambia a tu directorio base
-            $ruta = realpath($baseDir . $carpeta);
-            if ($ruta && strpos($ruta, $baseDir) === 0 && is_dir($ruta)) {
-                echo "<h2>Contenido de la carpeta: $carpeta</h2>";
-                echo "<ul>";
-                foreach (scandir($ruta) as $archivo) {
-                    if ($archivo !== '.' && $archivo !== '..') {
-                        $fileUrl = "Archivos/" . rawurlencode($carpeta) . "/" . rawurlencode($archivo);  echo "<li><a href='$fileUrl' download>$archivo</a></li>";
-                    }
-                }
-                echo "</ul>";
-            } else {
-                echo "Carpeta no válida.";
-            }
-        }
-        ?>
+      <div class="contenido" style="flex:1; padding: 32px;" id="contenido">
+        <ul id="contenido-list"></ul>
       </div>
     </div>
     <script>
-    // Solicita las carpetas al backend y las agrega a la lista
+    // Solicita las carpetas al backend y las agrega a la lista solo una vez
     fetch('listar_carpetas.php')
       .then(response => response.json())
       .then(data => {
@@ -52,14 +34,54 @@
           const li = document.createElement('li');
           li.className = 'item2';
           li.innerHTML = `
-            <form action="" method="post" style="display:inline;">
-              <input type="hidden" name="carpeta" value="${nombre}">
-              <button type="submit">${nombre.charAt(0).toUpperCase() + nombre.slice(1)}</button>
-            </form>
+            <button type=\"button\">${nombre.charAt(0).toUpperCase() + nombre.slice(1)}</button>
           `;
+          li.querySelector('button').addEventListener('click', function() {
+            cargarContenido(nombre);
+          });
           ul.appendChild(li);
         });
       });
+
+    function cargarContenido(nombreCarpeta) {
+      // Intenta usar cache local primero
+      const cacheKey = 'contenido_' + nombreCarpeta;
+      const cacheData = sessionStorage.getItem(cacheKey);
+      if (cacheData) {
+        renderContenido(JSON.parse(cacheData), nombreCarpeta);
+        return;
+      }
+      fetch('procesar.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: 'carpeta=' + encodeURIComponent(nombreCarpeta)
+      })
+      .then(response => response.json())
+      .then(archivos => {
+        sessionStorage.setItem(cacheKey, JSON.stringify(archivos));
+        renderContenido(archivos, nombreCarpeta);
+      });
+    }
+
+    function renderContenido(archivos, nombreCarpeta) {
+      const ul = document.getElementById('contenido-list');
+      ul.innerHTML = '';
+      if (Array.isArray(archivos) && archivos.length > 0) {
+        archivos.forEach(archivo => {
+          const li = document.createElement('li');
+          const link = document.createElement('a');
+          link.href = `Archivos/${encodeURIComponent(nombreCarpeta)}/${encodeURIComponent(archivo)}`;
+          link.download = archivo;
+          link.textContent = archivo;
+          li.appendChild(link);
+          ul.appendChild(li);
+        });
+      } else {
+        ul.innerHTML = '<li>No hay archivos en esta carpeta.</li>';
+      }
+    }
+    // Si quieres cargar una carpeta por defecto al abrir la página, descomenta la siguiente línea:
+    // cargarContenido('NOMBRE_CARPETA');
     </script>
   </body>
-  </html>  
+  </html>
