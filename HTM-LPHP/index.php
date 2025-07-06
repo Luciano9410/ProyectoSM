@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
+  <!--Logo flotante de whatsapp, solo hay que ponerle link cuando lo tengamos -->
+  <div class="Fixed-box"><img src="/Logos/WhatsApp.svg" alt=""></div>
 
   <header class="site-header">
    
