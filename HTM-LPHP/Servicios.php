@@ -26,7 +26,36 @@
 
   <p>OPCIONES</p>
   <br>
-  <p>ahora que lo pienso...no puedo usar <code>navs</code> y <code>a href</code> para conseguir mostrar la info de cada seccion...esto debera hacerse con js casi seguro</p>
+
+  <div class="options">
+  <ol>
+      <li>Medicina Clinica</li>
+      <li>Medicina respiratoria</li>
+      <li>Gastroenterología</li>
+      <li>Psicología</li>
+      <li>Fonoaudiología</li>
+      <li>Nutrición</li>
+      <li>Traumatología</li>
+      <li>Alergistas</li>
+      <li>Cardiología</li>
+      <li>Dermatología</li>
+      <li>Otorrinolaringología</li>
+      <li>Diabetología</li>
+      <li>Neurología</li>
+      <li>Flebolología</li>
+      <li>Psicopedagogía</li>
+      <li>Cirujanos</li>
+      <li>Endocrinologia</li>
+      <li>Uologia</li>
+      <li>Pediatria</li>
+      <li>Estudios y prácticas: Consultas, seguimiento profesional</li>
+      <li>Radiología</li>
+      <li>Laboratorio de analisis clinicos</li>
+      <li>Guardia médica activa</li>
+      <li>Guardia medica pasiva</li>
+   </ol>
+  </div>
+
 
   </section>
     
