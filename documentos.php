@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="serviciosstyle.css">
+    <link rel="stylesheet" href="documentosstyle.css">
   </head>
   <body>
     <header>
-      <div class="item1"><a href="#">menu</a></div>
       <ul class="barraMenu">
-        <li class="item"><a href="#">Volver a inicio</a></li>
-        <li class="item"><a href="#">Servicios</a></li>
+      <li class="item"><img src="Logo.png" alt="Logo"></li>
+      
+        <li class="item"><a href="#">Inicio</a></li>
       </ul>
     </header>  
     <div style="display: flex;">
@@ -20,7 +20,7 @@
           <!-- Las carpetas se agregarán aquí con JavaScript -->
         </ul>
       </div>
-      <div class="contenido" style="flex:1; padding: 32px;" id="contenido">
+      <div class="contenido" id="contenido">
         <ul id="contenido-list"></ul>
       </div>
     </div>
