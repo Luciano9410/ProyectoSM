@@ -1,6 +1,16 @@
+/* Google Fonts para salud: Montserrat (títulos/menu) y Roboto (texto general) */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
 /* Modern, clean style for the file browser */
+html, body {
+  height: 100%;
+}
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
   background: #f4f6fb;
   margin: 0;
   padding: 0;
@@ -8,11 +18,28 @@ body {
   padding-top: 80px; /* Ajusta según la altura real del header */
 }
 
+.Fixed-box{
+   
+    border-radius: 8px;
+    position: fixed; 
+    bottom: 150px; 
+    right: 100px; 
+    padding: 10px; 
+    z-index: 1500;
+}
+/*Se ajusta el tamaño de la imagen al div de whatsapp.. */
+.Fixed-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 header {
   padding: 0px;
-  height: 100px;
+  height: 70px;
   display: flex;
-  background-color: #0066cc;
+  background-color:#004d99;
   box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.479);
   text-align: center;
   position: fixed;
@@ -25,18 +52,45 @@ header {
    height: 100%;
    margin: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 20px;
+  position: relative;
+}
+.inicio {
+  display: flex 1;
+  margin-left: 20px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: white;
+  text-decoration: none;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+}
+.logo {
+  display: flex 3;
+  border: black solid 1px;
+  position:relative;
+  height: 70px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  border: red solid 1px;
+  height: 70px;
+  width: auto;
+  margin-right: 20px;
 }
 ul {
   list-style: none;
 }
 .barraMenu img {
-  height: 100px;
-  width: auto;
+  height: 70px;
+border: black solid 1px;
 }
+
 
 .item a {
   color: white;
@@ -46,27 +100,28 @@ ul {
   transition: background-color 0.2s, color 0.2s;
 }
 .item a:hover {
-  background-color: #9a9fab;
+  height: 100%;
+  background-color: #9a9fab7b;
   text-decoration: none;
   border-radius: 0.5rem;
 }
 
 .item {
- 
-  font-size: 1.2rem;
+  margin-left: 1.5rem;
+  font-size: 1.3rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 800;
   transition: color 0.2s;
-  
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
 }
 
 .sidebar {
   position: fixed;
-  top: 100px; /* igual al padding-top del body/header */
+  top: 70px; /* igual al padding-top del body/header */
   left: 0;
-  height: calc(100vh - 80px); /* ocupa el alto restante debajo del header */
+  height: calc(100vh - 70px); /* solo resta el header */
   width: 330px;
-  background-color: #0066cc;
+  background-color: #004d99;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.221);
   z-index: 1000;
   display: flex;
@@ -74,6 +129,8 @@ ul {
   align-items: center;
   justify-content: flex-start;
   overflow-y: auto;
+  overflow-x: hidden;
+  font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
 }
 
 .sidebar > ul {
@@ -84,6 +141,7 @@ ul {
   align-items: flex-start;
   justify-content: flex-start;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 .sidebar > ul > li {
   list-style: none;
@@ -111,11 +169,10 @@ ul {
 }
 
 .contenido {
-  top: 0px; /* igual al padding-top del body/header */
   position: relative;
   margin-left: 300px; /* igual al ancho del sidebar */
-  flex: 1;
-  padding: 32px;
+  flex: 1 0 auto;
+  padding-left: 32px; 
   height: 100%;
   background: #f9fafc;
   box-sizing: border-box;
@@ -135,7 +192,7 @@ ul {
 .contenido ul, .contenido ol {
   width: 100%;
   padding: 0;
-  margin: 0 0 16px 0;
+  margin: 0 0 16px 0; 
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -217,6 +274,11 @@ ul {
     font-size: 0.98rem;
     padding: 10px 10px;
   }
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }
 
 @media (max-width: 700px) {
@@ -230,8 +292,21 @@ ul {
     padding: 12px;
     gap: 10px;
   }
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
+  }
+  .barraMenu {
+    justify-content: center;
+  }
+  .logo {
+    position: static;
+    left: unset;
+    top: unset;
+    transform: none;
+    margin: 0 auto;
+  }
 }
-
 @media (max-width: 480px) {
   .sidebar {
     width: 100vw;
@@ -254,9 +329,52 @@ ul {
     padding: 5px 10px;
     font-size: 0.93rem;
   }
+  .site-footer {
+    margin-left: 0;
+    width: 100%;
+    padding: 1.5rem 0.5rem;
+  }
 }
 
+/* Footer */
+.site-footer {
+  background-color: #343a40;
+  color: #ccc;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: 330px; /* igual al ancho del sidebar */
+  width: calc(100% - 330px);
+  box-sizing: border-box;
+}
+.footer-section {
+  min-width: 200px;
+}
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.footer-section a {
+  display: block;
+  color: #adb5bd;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+  
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 

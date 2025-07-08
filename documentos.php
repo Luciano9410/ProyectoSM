@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="documentosstyle.css">
   </head>
   <body>
+    <!--Logo flotante de whatsapp, solo hay que ponerle link cuando lo tengamos -->
+  <div class="Fixed-box"><img src="WhatsApp.svg" alt=""></div>
     <header>
       <ul class="barraMenu">
-      <li class="item"><img src="Logo.png" alt="Logo"></li>
-      
-        <li class="item"><a href="#">Inicio</a></li>
+        <div class="inicio"><a href="index.php">Inicio</a></div>
+        <div class="logo"><img src="Logo.png" alt="Logo"></div>
       </ul>
     </header>  
     <div style="display: flex;">
@@ -24,6 +25,28 @@
         <ul id="contenido-list"></ul>
       </div>
     </div>
+     <footer class="site-footer">
+    <div class="footer-section">
+      <h3>Direcciones</h3>
+      <p>Av. Constitucion 289, San Vicente, Misiones</p>
+ 
+    </div>
+    <div class="footer-section">
+      <h3>Contactos</h3>
+      <a href="#">?</a><br>
+
+    </div>
+    <div class="footer-section social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Whatsapp</a>
+
+    </div>
+    <div class="footer-section legal">
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </footer>
     <script>
     // Solicita las carpetas al backend y las agrega a la lista solo una vez
     fetch('listar_carpetas.php')
