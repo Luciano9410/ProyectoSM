@@ -19,7 +19,7 @@
         </button> 
        
         <header>
-            <img src="Logo.png" alt="Logo" class="imgLogo">
+          <a href="indez.php"><img src="Logo.png" alt="Logo" class="imgLogo"></a> 
         </header>       
     </nav>
     
@@ -29,7 +29,7 @@
               <div class="links-container">
                  <div class="divcerrar">
                       <button id="cerrarMenu">
-                           <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32" fill="white"><path d="M256-200l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"/></svg>
+                           <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="white"><path d="M256-200l-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224z"/></svg>
                       </button>   
                  </div>
                <div class="opciones">
@@ -56,10 +56,29 @@
          </div>
     </div> 
        
-    <footer>
-        <p>© 2023 Tu Empresa. Todos los derechos reservados.</p>
-        <p>Contacto:    <a href="mailto:info@tuempresa.com">info@tuempresa.com</a></p>
-    </footer>
+  <footer class="site-footer">
+    <div class="footer-section">
+      <h3>Direcciones</h3>
+      <p>Av. Constitucion 289, San Vicente, Misiones</p>
+ 
+    </div>
+    <div class="footer-section">
+      <h3>Contactos</h3>
+      <a href="#">?</a><br>
+
+    </div>
+    <div class="footer-section social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Whatsapp</a>
+
+    </div>
+    <div class="footer-section legal">
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </footer>
+
     <!-- Script para abrir y cerrar el menú lateral-->
     <script>
     document.getElementById("abrirMenu").addEventListener("click", function() {
