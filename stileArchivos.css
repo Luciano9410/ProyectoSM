@@ -176,13 +176,6 @@ body {
 
 }
 
-footer{
-    background-color: #3FA9F5;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .links-container{
     display: flex;
     flex-direction: column;
@@ -196,12 +189,15 @@ footer{
   color: #ccc;
   padding: 3rem 2rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+    flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
 }
 .footer-section {
+   flex:1;
   min-width: 200px;
+ text-align: center;
 }
 .footer-section h3 {
   color: #ffffff;
@@ -216,6 +212,6 @@ footer{
 .footer-section a:hover {
   text-decoration: underline;
 }
-/* Responsive */
+
 
 
