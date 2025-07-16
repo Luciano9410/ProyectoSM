@@ -8,7 +8,7 @@ if ($ruta && strpos($ruta, realpath($base)) === 0) {
   foreach ($archivos as $archivo) {
     $nombre = basename($archivo);
     $url = $base.'/'.$carpeta.'/'.$nombre; // o usar una ruta relativa si accedes desde navegador
-    echo "<li><a href='$url' download>$nombre</a></li>";
+    echo "<li><a href='$url' target='_blank' >$nombre</a></li>";
   }
 } else {
   echo "<li>No se pudo acceder a la carpeta</li>";

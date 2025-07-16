@@ -84,9 +84,11 @@
     document.getElementById("abrirMenu").addEventListener("click", function() {
   const div = document.getElementById("sidebar");
   const content = document.getElementById("content");
-  if (div.style.display === "none") {
+  const isHidden = window.getComputedStyle(div).display === "none";
+
+  if (isHidden) {
     div.style.display = "flex";
-    content.style.width = "calc(100% - 200px);"; // Ajusta el ancho del contenido principal
+    content.style.width = "calc(100% - 200px)"; // Ajusta el ancho del contenido principal
   } else {
     div.style.display = "none";
     content.style.width = "100%"; // Ajusta el ancho del contenido principal
@@ -97,7 +99,7 @@
   const content = document.getElementById("content");
   if (div.style.display === "none") {
     div.style.display = "flex";
-     content.style.width = "calc(100% - 200px);";  // Ajusta el ancho del contenido principal
+     content.style.width = "calc(100% - 200px)";  // Ajusta el ancho del contenido principal
   } else {
     div.style.display = "none";
     content.style.width = "100%";  // Ajusta el ancho del contenido principal
