@@ -16,7 +16,7 @@
       <ul>
         <li><a href="#">Sanatorio</a></li>
         <li><a href="#">Pacientes</a></li>
-        <li><a href="#">?</a></li>
+        <li><a href="/HTM-LPHP/archivos.php">Archivos</a></li>
         <li><a href="#">?</a></li>     
       </ul>
     </nav>
