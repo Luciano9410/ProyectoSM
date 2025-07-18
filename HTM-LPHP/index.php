@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="../CSS/styles.css">
 </head>
 <body>
+  <!--Logo flotante de whatsapp, solo hay que ponerle link cuando lo tengamos -->
+  <div class="Fixed-box"><img src="/Logos/WhatsApp.svg" alt=""></div>
 
   <header class="site-header">
    
     <nav class="main-nav">
       <ul>
-        <li class="inicio" id="link-inicio"><a href="index.html">INICIO</a></li>
-        <li><a href="Servicios.php">SERVICIOS</a></li>
-        <li><a href="#">TURNOS/CONSULTAS</a></li>
-        <li><a href="#">INTERNACION</a></li>    
-        <li><a href="#">CONSULTORIOS</a></li>     
-        
+        <li><a href="#">Sanatorio</a></li>
+        <li><a href="#">Pacientes</a></li>
+        <li><a href="/HTM-LPHP/archivos.php">Archivos</a></li>
+        <li><a href="#">?</a></li>     
       </ul>
     </nav>
   </header>

@@ -1,0 +1,217 @@
+/*Se ajusta el tamaño de la imagen al div de whatsapp.. */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+}
+.Fixed-box img {
+    width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.Fixed-box{
+   
+    border-radius: 8px;
+    position: fixed; 
+    bottom: 4rem; 
+    right: 2rem; 
+    padding: 10px; 
+    z-index: 1500;
+}
+
+
+.navbar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color:#004d99;
+    min-height: 3rem;
+    z-index: 10;
+    box-shadow: 0px 15px 6px rgba(0, 0, 0, 0.143);
+   
+
+}
+
+
+#abrirMenu{
+    background-color: transparent;
+    margin : 18px 0px 18px 20px; /*margin: top → right → bottom → left*/
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    
+    
+}
+#abrirMenu:hover{
+    background-color: rgba(255, 255, 255, 0.144);
+}
+.imgLogo{
+    max-width: 80px;
+    max-height: auto;
+     padding-right: 20px;
+}
+.hero{
+    position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    min-height: 800px;
+}
+
+.divcerrar{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    
+   
+}
+#cerrarMenu{
+    height: 44px;
+     border-radius: 5px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+#cerrarMenu:hover{
+    background-color:rgba(255, 255, 255, 0.144);
+}
+.sidebar{
+    position: relative;
+    display: none;
+    background-color:#004d99ef;
+    width: 300px;
+    box-shadow: 10px 0 15px rgba(0, 0, 0, 0.3);
+    padding: 15px; 
+    padding-top: 0px;
+    z-index: 5;
+}
+.opciones{
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 800px;
+}
+.opciones ul{
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    list-style: none;
+    
+}
+.opciones ul li{
+    width: 100%;
+    padding: 5px;
+   margin-right: 5px;
+  
+}
+
+.opciones ul li:hover{
+    background-color:  rgba(255, 255, 255, 0.144);
+    text-decoration: none;
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: block;
+    
+}
+.opciones ul li a{
+    padding: 5px;
+    
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+}
+
+.contenedor{
+    background-color: aliceblue;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+   width: 100%;
+   
+   padding: 15px;
+   z-index: 2;
+  
+}
+.contenedor ul {
+    list-style: none;
+    padding-left: 0px;
+}
+.contenedor ul li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: rgba(128, 128, 128, 0.17);
+}
+.contenedor ul li:hover {
+    background-color: white;
+   /* background-color: #e7e9eb10;*/
+}
+.contenedor ul li a {
+    font-family: 'Open Sans', sans-serif;
+     color: black;
+    text-decoration: none;
+}
+
+
+.barraMenu img {
+  height: 70px;
+
+}
+
+.links-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+
+/* Footer */
+.site-footer {
+  background-color: #343a40;
+  color: #ccc;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+    flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.footer-section {
+   flex:1;
+  min-width: 200px;
+ text-align: center;
+}
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.footer-section a {
+  display: block;
+  color: #adb5bd;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+

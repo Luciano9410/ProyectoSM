@@ -14,13 +14,14 @@ body h1{
 
     height: 100vh;
     width: 17vw;
-    background-color: #990000;
+    background-color: #0056b3;
    
 }
  
 .left-side>p {margin-left: 5%;}
 
-
+.options{margin-left: 5%;}
+.options>ul{list-style: none;}
 .header-content{
 
   display: flex;

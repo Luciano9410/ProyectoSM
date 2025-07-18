@@ -1,3 +1,21 @@
+/*Estilo al div del logo de whatsapp, verificar si es responsive.. */
+.Fixed-box{
+   
+   border-radius: 8px;
+    position: fixed; 
+    bottom: 4rem; 
+    right: 2rem; 
+    padding: 10px; 
+    z-index: 1500;
+}
+/*Se ajusta el tamaño de la imagen al div de whatsapp.. */
+.Fixed-box img {
+   width: 65px;
+    height: 65px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
 /* Tipografía y reset básico */
 * {
   margin: 0;
@@ -156,12 +174,15 @@ body {
   color: #ccc;
   padding: 3rem 2rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+    flex-wrap: wrap;
   gap: 2rem;
   justify-content: space-between;
 }
 .footer-section {
+   flex:1;
   min-width: 200px;
+ text-align: center;
 }
 .footer-section h3 {
   color: #ffffff;
@@ -176,6 +197,7 @@ body {
 .footer-section a:hover {
   text-decoration: underline;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {

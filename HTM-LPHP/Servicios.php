@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../CSS/styles.css">
     <link rel="stylesheet" href="../CSS/servicios.css">
     <title>Document</title>
-</head>
+</head> 
 <body>
      <header class="site-header-servicios">
    
@@ -28,7 +28,7 @@
   <br>
 
   <div class="options">
-  <ol>
+  <ul>
       <li>Medicina Clinica</li>
       <li>Medicina respiratoria</li>
       <li>Gastroenterología</li>
