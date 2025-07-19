@@ -8,7 +8,7 @@
 </head>
 <body>
   <!--Logo flotante de whatsapp, solo hay que ponerle link cuando lo tengamos -->
-  <div class="Fixed-box"><img src="/Logos/WhatsApp.svg" alt=""></div>
+  <div class="Fixed-box"><img src="../Logos/WhatsApp.svg" alt=""></div>
 
   <header class="site-header">
    
@@ -16,7 +16,7 @@
       <ul>
         <li><a href="#">Sanatorio</a></li>
         <li><a href="#">Pacientes</a></li>
-        <li><a href="/HTM-LPHP/archivos.php">Archivos</a></li>
+        <li><a href="archivos.php">Archivos</a></li>
         <li><a href="#">?</a></li>     
       </ul>
     </nav>
@@ -79,7 +79,7 @@
   const path = window.location.pathname;
   const nombreArchivo = path.substring(path.lastIndexOf('/') + 1);
 
-  if (nombreArchivo === '' || nombreArchivo === 'index.html') {
+  if (nombreArchivo === '' || nombreArchivo === 'index.php') {
     document.getElementById("link-inicio").style.display = "none";
   }
 </script>

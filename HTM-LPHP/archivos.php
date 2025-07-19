@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descarga de Archivos PDF</title>
-    <link rel="stylesheet" href="/CSS/stileArchivos.css">
+    <link rel="stylesheet" href="../CSS/stileArchivos.css">
 </head>
 <body>
     <!-- Icono de WhatsApp -->
-    <div class="Fixed-box"><img src="/Logos/WhatsApp.svg" alt=""></div>
+    <div class="Fixed-box"><img src="../Logos/WhatsApp.svg" alt=""></div>
 
     <!-- Barra de navegación -->
     <nav class="navbar">
