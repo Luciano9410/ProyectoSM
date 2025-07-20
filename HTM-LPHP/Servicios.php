@@ -23,14 +23,15 @@
 
  <div class="header-content">
   <section class="left-side">
-   <p>OPCIONES</p><br>
+    <br>
+   <p id="txt_opciones"><b>Servicios🡇</b></p><br>
    
 
   <div class="options">
     
       
       <button onclick="boton_servicios('gastroenterologia')">Gastroenterología</button>
-      <button onclick="boton_servicios('psicología')">Psicología</button>
+      <button onclick="boton_servicios('psicologia')">Psicología</button>
       <button onclick="boton_servicios('medicina_clinica')">Medicina Clinica</button>
       <button onclick="boton_servicios('medicina_respiratoria')">Medicina respiratoria</button>
       <button onclick="boton_servicios('psicologia')">Psicologia</button>
@@ -55,15 +56,14 @@
       <button onclick="boton_servicios('guardia_activa')">Guardia médica activa</button>
       <button onclick="boton_servicios('guardia_pasiva')">Guardia médica pasiva</button>
 
-
-
   </div>
   </section >
     
 
 
   <div id="info_area">
-  <h1>Servicios que le ofrecemos</h1>
+  <h1>Servicios que le ofrecemos</h1><br>
+  <p>Seleccione algun servicio a la izquierda del que podamos proporcionarle informacion!!! </p>
 
   </div>
   

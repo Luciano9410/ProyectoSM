@@ -16,7 +16,7 @@ function boton_servicios(servicio) {
       <h1>Gastroenterología</h1><br>
       <p>Texto de ejemplo para gastroenterología...</p>
     `,
-    psicología: `
+    psicologia: `
       <h1>Psicología</h1><br>
       <p>Texto de ejemplo para psicología...</p>
     `,
