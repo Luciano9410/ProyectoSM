@@ -29,7 +29,7 @@
 
   <div class="options">
     
-      
+    
       <button onclick="boton_servicios('gastroenterologia')">Gastroenterología</button>
       <button onclick="boton_servicios('psicologia')">Psicología</button>
       <button onclick="boton_servicios('medicina_clinica')">Medicina Clinica</button>
@@ -66,15 +66,36 @@
   <p>Seleccione algun servicio a la izquierda del que podamos proporcionarle informacion!!! </p>
 
   </div>
-  
-
-    
   </div>
+
 </header>
 
 
 
 
+
+  <footer class="site-footer">
+    <div class="footer-section">
+      <h3>Direcciones</h3>
+      <p>Av. Constitucion 289, San Vicente, Misiones</p>
+ 
+    </div>
+    <div class="footer-section">
+      <h3>Contactos</h3>
+      <a href="#">?</a><br>
+
+    </div>
+    <div class="footer-section social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Whatsapp</a>
+
+    </div>
+    <div class="footer-section legal">
+      <a href="#">Política de privacidad</a>
+      <a href="#">Términos y condiciones</a>
+    </div>
+  </footer>
 
 
 

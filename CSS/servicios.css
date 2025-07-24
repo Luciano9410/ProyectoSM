@@ -1,34 +1,41 @@
 
+body{
+  width: 100%;
+  height: 99%;
+}
+
 body h1{
   color: #2c3e50;
   text-decoration: underline;
+
 }
 
+
+
+/*Todo el lado izquierdo con los button*/
 .site-header-servicios {
   background-color: #ffffff;
   color: white;
 }
 
-#txt_opciones{
+#txt_opciones{/* "Servicios" */
   font-size: 160%;
   margin-left: 10%;
-  text-decoration: none;
+  text-decoration: none;  
 }
 
-.left-side{
+.left-side{/*Sombra y tamanio*/
+  float: initial;
     box-shadow: inset 0px 10px 9px -4px rgba(15, 10, 10, 0.292)  ;
-    height: 100%;
     width: 17vw;
     background-color: #004d99;
-   
+    padding-bottom: 2%;
+
+
 }
  
-.left-side>p {margin-left: 5%;}
-
-
-
-
-
+.left-side>p {
+  margin-left: 5%;}
 
 
 .options button{
@@ -46,27 +53,62 @@ body h1{
 
 }
 
-
-
-
-
 .options{margin-left: 5%;
-  
-
 }
+
 
 .header-content{
-
   display: flex;
   flex-direction: row;
-  
+  margin-bottom: 3%;
   gap: 3%;
+  margin-bottom: 0;
 }
 
+/*Informacion visible a la derecha*/
 #info_area{
   color: rgb(0, 0, 0);
   width:93% ;
 }
+
+
+
+
+
+/* Footer */
+.site-footer {
+  background-color: #343a40;
+  color: #ccc;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.footer-section {
+   flex:1;
+  min-width: 200px;
+ text-align: center;
+}
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.footer-section a {
+  display: block;
+  color: #adb5bd;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
 
 
 /* Responsive */
@@ -77,6 +119,57 @@ body h1{
     width: 40vw;
     background-color: #004d99;
 }
+  .site-footer {
+    font-size: 80%;
+    flex-wrap: wrap;
+    display: flex;
+    /*
+    flex-direction: column;
+    align-items: center;
+
+    */
 
 }
 
+#txt_opciones{
+  font-size: 90%;
+  margin-left: 10%;
+  text-decoration: none;
+}
+
+.left-side>p {
+  margin-left: 5%;
+  font-size: 8%;              
+}
+
+/*ERROR: deberia espaciar los puntos de los <li> pero no lo hace :p */
+.left-side li{
+  list-style: none;
+  margin-left: 20% !important;
+}
+
+.options button{
+  font-size: 55%;
+}
+
+
+.left-side{/*Sombra y tamanio*/
+    box-shadow: inset 0px 10px 9px -4px rgba(15, 10, 10, 0.292)  ;
+    height: 100%;
+    width: 35vw;
+    background-color: #004d99;
+    padding-bottom: 3%;
+   
+}
+
+#info_area{
+  font-size: 65%;
+  margin-right: 2.5%;
+  margin-left: 2%;
+}
+
+.main-nav{
+font-size: 80%;
+
+}
+}
